@@ -55,6 +55,7 @@
     border-radius: var(--radius-lg);
     padding: 1.5rem;
     margin-bottom: 1.25rem;
+    display: block;
   }
 
   .field-label { font-size: 13px; color: var(--text-secondary); margin-bottom: 6px; }
@@ -105,11 +106,7 @@
     display: flex; align-items: center; justify-content: center;
   }
   .wcard.s1 { background: #E6F1FB; border-color: #85B7EB; } .wcard.s1 .wd { color: #185FA5; } .wcard.s1 .wtick { background: #85B7EB; border-color: #85B7EB; }
-  .wcard.s2 { background: #B5D4F4; border-color: #378ADD; } .wcard.s2 .wd { color: #0C447C; } .wcard.s2 .wtick { background: #378ADD; border-color: #378ADD; }
-  .wcard.s3 { background: #378ADD; border-color: #185FA5; } .wcard.s3 .wd { color: #fff; } .wcard.s3 .wtick { background: #185FA5; border-color: #185FA5; }
-  .wcard.s4 { background: #185FA5; border-color: #0C447C; } .wcard.s4 .wd { color: #fff; } .wcard.s4 .wtick { background: #0C447C; border-color: #042C53; }
-  .wcard.s5 { background: #0C447C; border-color: #042C53; } .wcard.s5 .wd { color: #E6F1FB; } .wcard.s5 .wtick { background: #042C53; border-color: #042C53; }
-
+  
   .stay-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
   .stay-opt {
     border: 0.5px solid var(--border-tertiary);
@@ -157,57 +154,24 @@
 
   .r-section { display: none; } .r-section.visible { display: block; }
 
-  .legend { display: flex; align-items: center; gap: 8px; margin-bottom: 1rem; flex-wrap: wrap; }
-  .leg-it { display: flex; align-items: center; gap: 5px; font-size: 12px; color: var(--text-secondary); }
-  .leg-sw { width: 13px; height: 13px; border-radius: 3px; flex-shrink: 0; }
-
-  .hmap-month {
-    font-size: 11px; font-weight: 600; letter-spacing: .06em;
-    text-transform: uppercase; color: var(--text-secondary);
-    margin: 1rem 0 8px;
-  }
   .hgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 8px; }
   .hcell { border-radius: var(--radius-md); padding: 10px 12px; border: 0.5px solid transparent; display: flex; flex-direction: column; gap: 3px; }
   .hcell .hd { font-size: 13px; font-weight: 500; }
-  .hcell .hn { font-size: 11px; line-height: 1.4; }
-  .hcell .hc { font-size: 11px; font-weight: 600; margin-top: 2px; }
-  .hc0 { background: var(--bg-secondary); border-color: var(--border-tertiary); } .hc0 .hd, .hc0 .hn, .hc0 .hc { color: var(--text-tertiary); }
-  .hc1 { background: #E6F1FB; border-color: #85B7EB; } .hc1 .hd, .hc1 .hn, .hc1 .hc { color: #185FA5; }
-  .hc2 { background: #B5D4F4; border-color: #378ADD; } .hc2 .hd, .hc2 .hn, .hc2 .hc { color: #0C447C; }
-  .hc3 { background: #378ADD; border-color: #185FA5; } .hc3 .hd, .hc3 .hn, .hc3 .hc { color: #fff; }
-  .hc4 { background: #185FA5; border-color: #0C447C; } .hc4 .hd, .hc4 .hn, .hc4 .hc { color: #fff; }
-  .hc5 { background: #0C447C; border-color: #042C53; } .hc5 .hd, .hc5 .hn, .hc5 .hc { color: #E6F1FB; }
-
+  .hc0 { background: var(--bg-secondary); border-color: var(--border-tertiary); }
+  
   .stay-bars { display: flex; flex-direction: column; gap: 10px; }
   .sbar-row { display: flex; align-items: center; gap: 10px; }
   .sbar-label { font-size: 13px; color: var(--text-secondary); min-width: 90px; flex-shrink: 0; }
   .sbar-track { flex: 1; height: 30px; background: var(--bg-secondary); border-radius: 6px; overflow: hidden; }
-  .sbar-fill { height: 100%; border-radius: 6px; background: #378ADD; display: flex; align-items: center; padding-left: 10px; transition: width .4s; min-width: 0; }
+  .sbar-fill { height: 100%; border-radius: 6px; background: #378ADD; display: flex; align-items: center; padding-left: 10px; transition: width .4s; }
   .sbar-fill-text { font-size: 12px; font-weight: 600; color: #fff; white-space: nowrap; }
-  .sbar-count { font-size: 13px; font-weight: 500; color: var(--text-secondary); min-width: 24px; text-align: right; }
 
-  .winner {
-    display: inline-flex; align-items: center; gap: 6px;
-    background: #EAF3DE; color: #3B6D11;
-    border-radius: 20px; padding: 5px 14px;
-    font-size: 13px; font-weight: 500; margin-bottom: 1rem;
-  }
-
-  .resp-label { font-size: 13px; font-weight: 500; color: var(--text-secondary); margin: 1.25rem 0 8px; }
-  .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
   .chip {
     background: var(--bg-secondary); border: 0.5px solid var(--border-tertiary);
     border-radius: 20px; padding: 5px 10px;
     font-size: 12px; color: var(--text-secondary);
-    display: flex; align-items: center; gap: 6px;
   }
-  .chip button {
-    background: none; border: none; cursor: pointer;
-    color: var(--text-tertiary); font-size: 16px; line-height: 1; padding: 0;
-  }
-  .chip button:hover { color: var(--text-primary); }
-
-  .empty { text-align: center; padding: 2rem; font-size: 14px; color: var(--text-tertiary); }
 
   @media (max-width: 480px) {
     .stay-grid { grid-template-columns: 1fr; }
@@ -228,9 +192,12 @@
     <p>Two quick questions — results update live as everyone responds.</p>
   </div>
 
-  <div class="form-card">
+  <form class="form-card" name="beach-trip-survey" method="POST" data-netlify="true">
+    <input type="hidden" name="selected-weekends" id="hiddenWeekends" />
+    <input type="hidden" name="stay-length" id="hiddenStay" />
+
     <div class="field-label">Your name</div>
-    <input class="name-input" type="text" id="nameInput" placeholder="Enter your name…" maxlength="30"/>
+    <input class="name-input" type="text" name="visitor-name" id="nameInput" placeholder="Enter your name…" maxlength="30" required/>
 
     <div class="divider"></div>
 
@@ -274,28 +241,16 @@
       </div>
     </div>
 
-    <button class="submit-btn" onclick="submitEntry()">Submit my answers</button>
-  </div>
-
+    <button type="submit" class="submit-btn" onclick="prepareSubmit(event)">Submit my answers</button>
+  </form>
   <div class="results-card">
     <div class="results-title">Live results</div>
-
     <div class="tabs">
       <div class="tab active" id="tab1" onclick="switchTab(1)">Weekend overlap</div>
       <div class="tab" id="tab2" onclick="switchTab(2)">Stay length</div>
     </div>
 
     <div class="r-section visible" id="sec1">
-      <div class="legend">
-        <span style="font-size:12px;color:var(--text-secondary);margin-right:2px">Overlap:</span>
-        <span class="leg-it"><span class="leg-sw" style="background:var(--bg-secondary);border:0.5px solid var(--border-tertiary)"></span>0</span>
-        <span class="leg-it"><span class="leg-sw" style="background:#E6F1FB;border:0.5px solid #85B7EB"></span>1</span>
-        <span class="leg-it"><span class="leg-sw" style="background:#B5D4F4;border:0.5px solid #378ADD"></span>2</span>
-        <span class="leg-it"><span class="leg-sw" style="background:#378ADD;border:0.5px solid #185FA5"></span>3</span>
-        <span class="leg-it"><span class="leg-sw" style="background:#185FA5;border:0.5px solid #0C447C"></span>4</span>
-        <span class="leg-it"><span class="leg-sw" style="background:#0C447C;border:0.5px solid #042C53"></span>5+</span>
-      </div>
-      <div id="winnerBadge"></div>
       <div class="hmap-month">July 2025</div>
       <div class="hgrid" id="julyHmap"></div>
       <div class="hmap-month">August 2025</div>
@@ -306,7 +261,7 @@
       <div class="stay-bars" id="stayBars"></div>
     </div>
 
-    <div class="resp-label">Responses</div>
+    <div class="field-label" style="margin-top: 20px;">Local Session Responses</div>
     <div class="chips" id="chips"></div>
   </div>
 
@@ -323,13 +278,6 @@ const WEEKENDS = [
   {id:6, dates:"Aug 15–17", month:"august"},
   {id:7, dates:"Aug 22–24", month:"august"},
   {id:8, dates:"Aug 29–31", month:"august"},
-];
-
-const STAY_OPTS = [
-  {val:"fri-sun", label:"Fri – Sun"},
-  {val:"fri-mon", label:"Fri – Mon"},
-  {val:"thu-sun", label:"Thu – Sun"},
-  {val:"thu-mon", label:"Thu – Mon"},
 ];
 
 let selectedWeekends = new Set();
@@ -349,150 +297,46 @@ function switchTab(n) {
   document.getElementById('sec2').classList.toggle('visible', n === 2);
 }
 
-function selCls(c, max) {
-  if (c === 0) return "hc0";
-  if (max <= 1) return "hc1";
-  const r = c / max;
-  if (r <= 0.2) return "hc1";
-  if (r <= 0.4) return "hc2";
-  if (r <= 0.6) return "hc3";
-  if (r <= 0.8) return "hc4";
-  return "hc5";
-}
-
-function cardSelCls(c, max) {
-  if (max === 0 || max <= 1) return "s1";
-  const r = c / max;
-  if (r <= 0.2) return "s1";
-  if (r <= 0.4) return "s2";
-  if (r <= 0.6) return "s3";
-  if (r <= 0.8) return "s4";
-  return "s5";
-}
-
-function getWkCounts() {
-  const counts = {}, names = {};
-  WEEKENDS.forEach(w => { counts[w.id] = 0; names[w.id] = []; });
-  entries.forEach(e => {
-    e.weekends.forEach(id => {
-      counts[id] = (counts[id] || 0) + 1;
-      names[id].push(e.name);
-    });
-  });
-  return { counts, names };
-}
-
 function renderGrids() {
-  const { counts } = getWkCounts();
-  const max = Math.max(...Object.values(counts), 0);
   ["julyGrid", "augustGrid"].forEach(gid => {
     const month = gid === "julyGrid" ? "july" : "august";
     const grid = document.getElementById(gid);
     grid.innerHTML = "";
     WEEKENDS.filter(w => w.month === month).forEach(w => {
       const isSel = selectedWeekends.has(w.id);
-      const sc = isSel ? cardSelCls(counts[w.id], max) : "";
-      const tickColor = (sc === "s1" || sc === "s2") ? "#0C447C" : "white";
-      const tick = isSel
-        ? `<svg width="10" height="10" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="${tickColor}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>`
-        : "";
       const card = document.createElement("div");
-      card.className = "wcard " + sc;
-      card.innerHTML = `<span class="wd">${w.dates}</span><span class="wtick">${tick}</span>`;
+      card.className = "wcard " + (isSel ? "s1" : "");
+      card.innerHTML = `<span class="wd">${w.dates}</span><span class="wtick"></span>`;
       card.addEventListener("click", () => {
         if (selectedWeekends.has(w.id)) selectedWeekends.delete(w.id);
         else selectedWeekends.add(w.id);
-        renderAll();
+        renderGrids();
       });
       grid.appendChild(card);
     });
   });
 }
 
-function renderHmap() {
-  const { counts, names } = getWkCounts();
-  const max = Math.max(...Object.values(counts), 0);
-  ["julyHmap", "augustHmap"].forEach(gid => {
-    const month = gid === "julyHmap" ? "july" : "august";
-    const grid = document.getElementById(gid);
-    grid.innerHTML = "";
-    WEEKENDS.filter(w => w.month === month).forEach(w => {
-      const c = counts[w.id] || 0;
-      const ns = names[w.id] || [];
-      const cell = document.createElement("div");
-      cell.className = "hcell " + selCls(c, max);
-      cell.innerHTML = `<span class="hd">${w.dates}</span><span class="hn">${ns.length ? ns.join(", ") : "—"}</span><span class="hc">${c === 0 ? "No one" : c === 1 ? "1 person" : c + " people"}</span>`;
-      grid.appendChild(cell);
-    });
-  });
-  const badge = document.getElementById("winnerBadge");
-  const max2 = Math.max(...Object.values(getWkCounts().counts), 0);
-  if (entries.length >= 2 && max2 > 0) {
-    const c2 = getWkCounts().counts;
-    const bestId = Object.entries(c2).sort((a, b) => b[1] - a[1])[0][0];
-    const best = WEEKENDS[bestId];
-    badge.innerHTML = `<div class="winner"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1l1.5 3.5 3.5.5-2.5 2.5.5 3.5L7 9.5 4 11l.5-3.5L2 5l3.5-.5z" fill="#3B6D11"/></svg> Best weekend: ${best.dates} — ${c2[bestId]} of ${entries.length} people</div>`;
-  } else {
-    badge.innerHTML = "";
-  }
-}
-
-function renderStayBars() {
-  const el = document.getElementById("stayBars");
-  if (entries.length === 0) {
-    el.innerHTML = `<div class="empty">No responses yet — be the first!</div>`;
+// Netlify Submission Helper
+function prepareSubmit(e) {
+  const name = document.getElementById("nameInput").value.trim();
+  
+  if (!name || selectedWeekends.size === 0 || !selectedStay) {
+    e.preventDefault();
+    alert("Please enter your name, pick at least one weekend, and choose a stay length!");
     return;
   }
-  const counts = {};
-  STAY_OPTS.forEach(o => { counts[o.val] = 0; });
-  entries.forEach(e => { if (e.stay) counts[e.stay] = (counts[e.stay] || 0) + 1; });
-  const max = Math.max(...Object.values(counts), 1);
-  el.innerHTML = STAY_OPTS.map(o => {
-    const c = counts[o.val] || 0;
-    const w = c > 0 ? Math.max(Math.round((c / max) * 100), 12) : 0;
-    return `<div class="sbar-row">
-      <div class="sbar-label">${o.label}</div>
-      <div class="sbar-track"><div class="sbar-fill" style="width:${w}%"><span class="sbar-fill-text">${c === 0 ? "" : c === 1 ? "1 person" : c + " people"}</span></div></div>
-      <div class="sbar-count">${c}</div>
-    </div>`;
-  }).join("");
+
+  // Populate hidden inputs for Netlify
+  document.getElementById('hiddenWeekends').value = Array.from(selectedWeekends).map(id => WEEKENDS[id].dates).join(", ");
+  document.getElementById('hiddenStay').value = selectedStay;
+  
+  // Note: Form will now submit to Netlify. 
+  // The page will refresh/redirect to a "Thank you" page by default.
 }
 
-function renderChips() {
-  document.getElementById("chips").innerHTML = entries.map((e, i) =>
-    `<div class="chip">${e.name}${e.stay ? " · " + (STAY_OPTS.find(o => o.val === e.stay)?.label || "") : ""} <button onclick="removeEntry(${i})">×</button></div>`
-  ).join("") || `<div style="font-size:13px;color:var(--text-tertiary)">No responses yet.</div>`;
-}
-
-function renderAll() {
-  renderGrids();
-  renderHmap();
-  renderStayBars();
-  renderChips();
-}
-
-function submitEntry() {
-  const name = document.getElementById("nameInput").value.trim();
-  if (!name) { document.getElementById("nameInput").focus(); return; }
-  if (selectedWeekends.size === 0) { alert("Please select at least one weekend."); return; }
-  if (!selectedStay) { alert("Please choose a stay length."); return; }
-  const idx = entries.findIndex(e => e.name.toLowerCase() === name.toLowerCase());
-  const entry = { name, weekends: [...selectedWeekends], stay: selectedStay };
-  if (idx >= 0) entries[idx] = entry;
-  else entries.push(entry);
-  selectedWeekends.clear();
-  selectedStay = null;
-  document.getElementById("nameInput").value = "";
-  document.querySelectorAll('.stay-opt').forEach(o => o.classList.remove('chosen'));
-  renderAll();
-}
-
-function removeEntry(i) {
-  entries.splice(i, 1);
-  renderAll();
-}
-
-renderAll();
+// Initial render
+renderGrids();
 </script>
 </body>
 </html>
